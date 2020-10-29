@@ -37,10 +37,13 @@ public class Triangle {
         if ( sideA == sideB || sideB == sideC || sideC == sideA) return "isosceles";
         return "scalene";
     }
+    public String toString(){
+        return( "v1(" + this.v1.getX() + ", " + this.v1.getY() + ") " + 
+                "v2(" + this.v2.getX() + ", " + this.v2.getY() + ") " +
+                "v3(" + this.v3.getX() + ", " + this.v3.getY() + ")");
+    }
 
 /*
-public String classfiy() 
-    Return the "equilateral" "isosceles" or "scalene" Round distances to the nearest tenthousandths for your classifications.
 
 public String toString() 
      The format should be "v1(23.0, 4.0) v2(-2.3, 5.001) v3(5.0, 0.52)"
