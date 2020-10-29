@@ -16,5 +16,12 @@ public class Point {
     public double getY(){
         return y;
     }  
-
+    // 2.3a distanceTo - remove ROUND
+    public double distanceTo(Point other) { 
+        return (Math.sqrt(Math.pow((this.y - other.y),2) + Math.pow((this.x - other.x),2))); 
+    }
+    //2.3b equals
+    public boolean equals(Point other){
+        return (this.x == other.x && this.y == other.y);
+    }
 }
