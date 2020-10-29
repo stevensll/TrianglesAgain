@@ -18,7 +18,7 @@ public class Triangle {
         sideB = v2.distanceTo(v3);
         sideC = v3.distanceTo(v1);
     }
-    // new methos must be without rounding
+    // new methods must be without rounding
     public double getPerimeter() {
         createSides();
         return sideA + sideB + sideC;
@@ -27,17 +27,18 @@ public class Triangle {
         double semip = this.getPerimeter() / 2;
         return Math.sqrt(semip*(semip - sideA)*(semip - sideB)*(semip - sideC));
     }
-
+    // this one uses rounding distances to the nearest TENTHOUSANDTHS
+    public String classify(){
+        createSides();
+        sideA = Math.round(sideA * 10000.0) / 10000.0;
+        sideB = Math.round(sideB * 10000.0) / 10000.0;
+        sideC = Math.round(sideC * 10000.0) / 10000.0;
+        if (sideA == sideB && sideB ==sideC) return "equilateral";
+        if ( sideA == sideB || sideB == sideC || sideC == sideA) return "isosceles";
+        return "scalene";
+    }
 
 /*
-c) Four accessors:  (the first three are the same as the old assignment with rounding modifications)
-
-public double getPerimeter() 
-   Return the area without any rounding.
-
-public double getArea() 
-   Return the area using Heron's formula without any rounding.
-
 public String classfiy() 
     Return the "equilateral" "isosceles" or "scalene" Round distances to the nearest tenthousandths for your classifications.
 
