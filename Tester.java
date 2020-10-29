@@ -21,5 +21,6 @@ public class Tester {
         Triangle coordinateTriangleTest = new Triangle(0.5248, -0.8002, -2.437885, 1.94,0.0, 0.0);
         System.out.println(pointTriangleTest.getPerimeter());
         System.out.println(coordinateTriangleTest.getPerimeter());
+        System.out.println(pointTriangleTest.getArea());
     }
 }

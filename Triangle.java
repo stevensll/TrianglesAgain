@@ -5,20 +5,27 @@ public class Triangle {
         v1 = a;
         v2 = b;
         v3 = c;
-        sideA = v1.distanceTo(v2);
-        sideB = v2.distanceTo(v3);
-        sideC = v3.distanceTo(v1);
     }
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
         v1 = new Point (x1,y1);
         v2 = new Point (x2,y2);
         v3 = new Point (x3,y3);
+
+    }
+    // helper method that helps set values for sideA/B/C
+    public void createSides(){
         sideA = v1.distanceTo(v2);
         sideB = v2.distanceTo(v3);
         sideC = v3.distanceTo(v1);
     }
+    // new methos must be without rounding
     public double getPerimeter() {
+        createSides();
         return sideA + sideB + sideC;
+    }
+    public double getArea(){
+        double semip = this.getPerimeter() / 2;
+        return Math.sqrt(semip*(semip - sideA)*(semip - sideB)*(semip - sideC));
     }
 
 
