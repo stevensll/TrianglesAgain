@@ -42,13 +42,15 @@ public class Triangle {
                 "v2(" + this.v2.getX() + ", " + this.v2.getY() + ") " +
                 "v3(" + this.v3.getX() + ", " + this.v3.getY() + ")");
     }
-
-/*
-
-public String toString() 
-     The format should be "v1(23.0, 4.0) v2(-2.3, 5.001) v3(5.0, 0.52)"
-
--One mutator
-public void setVertex(int index, Point newP) - replace the specified Point (0,1, or 2) with the new Point
-*/
+    public void setVertex(int index, Point newp) {
+        if (index == 0){
+            v1 = new Point(newp.getX(), newp.getY());
+        }
+        if (index == 1){
+            v2 = new Point(newp.getX(), newp.getY());
+        }
+        if (index == 2){
+            v3 = new Point(newp.getX(), newp.getY());
+        }
+    }
 }

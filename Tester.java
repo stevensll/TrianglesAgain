@@ -4,6 +4,7 @@ public class Tester {
         Point testpoint = new Point(3,4);
         Point testpoint2 = new Point(4,5);
         Point testpoint3 = new Point(3,4);
+
         /* tests for point
         System.out.println(testpoint.getX()+", "+testpoint.getY());
         System.out.println(testpoint.equals(testpoint2));
@@ -16,7 +17,7 @@ public class Tester {
         Point b = new Point (-2.437885, 1.94);
         Point c = new Point (0.0, 0.0);
         Triangle pointTriangleTest = new Triangle(a,b,c);
-        Triangle coordinateTest1 = new Triangle(0.5248, -0.8002, -2.437885, 1.94,0.0, 0.0);
+        Triangle coordinateTest = new Triangle(0.5248, -0.8002, -2.437885, 1.94,0.0, 0.0);
         
         /*tests for perimeter 
         System.out.println(pointTriangleTest.getPerimeter());
@@ -41,11 +42,23 @@ public class Tester {
         System.out.println(coordinateScalene.classify());
         */
 
-        // tests toString()
+        /* tests for toString()
         System.out.println(pointTriangleTest.toString());
-        System.out.println(coordinateTest1.toString());
+        System.out.println(coordinateTest.toString());
+        */ 
 
-
+        /* tests for setVertex()
+        Point k = new Point (15, 15);
+        Point l = new Point (2, 2);
+        Point m = new Point (4.0, 0.0);
+        System.out.println(pointTriangleTest.toString());
+        pointTriangleTest.setVertex(0, k );
+        pointTriangleTest.setVertex(1, l);
+        pointTriangleTest.setVertex(2, m);
+        System.out.println(pointTriangleTest.toString());
+        System.out.println(pointTriangleTest.getPerimeter());
+        System.out.println(pointTriangleTest.getArea());
+        */
 
     }
 }
